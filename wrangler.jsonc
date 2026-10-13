@@ -1,0 +1,7 @@
+{
+  "name": "chungso",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-13",
+  "durable_objects": {"bindings": [{"name": "CLEAN_BOT", "class_name": "CleanBot"}]},
+  "migrations": [{"tag": "v1", "new_sqlite_classes": ["CleanBot"]}]
+}
