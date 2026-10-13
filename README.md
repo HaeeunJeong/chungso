@@ -17,10 +17,15 @@ npm test
 npx wrangler@4 login
 npx wrangler@4 secret put NOTION_TOKEN
 npx wrangler@4 secret put WEBHOOK_SECRET
+npx wrangler@4 secret put MEMBERS_DATA_SOURCE
+npx wrangler@4 secret put SESSIONS_DATA_SOURCE
+npx wrangler@4 secret put RECORDS_DATA_SOURCE
 npm run deploy
 ```
 
 `NOTION_TOKEN` 프롬프트에 Notion 내부 연결 토큰을 입력합니다. `WEBHOOK_SECRET`에는 비밀번호 관리자로 만든 32자 이상의 무작위 문자열을 입력합니다. 토큰과 비밀 키는 저장소나 채팅에 붙여 넣지 마세요. Wrangler가 Worker 생성을 묻는 경우 `chungso` 이름으로 생성합니다. 배포 출력의 실제 workers.dev URL을 사용합니다.
+
+각 `*_DATA_SOURCE`에는 각각 구성원·청소 회차·출결 기록의 **data source ID**를 입력합니다. 데이터베이스 페이지 ID와 다릅니다. Notion API의 데이터베이스 조회 응답 `data_sources[].id`에서 확인하며, 공개 저장소에는 기록하지 않습니다.
 
 ## Notion 버튼 두 개 설정
 
